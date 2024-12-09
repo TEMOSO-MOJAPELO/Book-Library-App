@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HexSoftwares Task 3 Project 2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <div class="top-header">
+                <h1><i class="fa-solid fa-book-atlas"></i> DigiBook</h1>
+            </div>
+            <p>Your Personal Book Library</p>
+        </header>
+
+        <div class="section" id="addBookSection">
+            <h2 class="section-title">Add New Book</h2>
+            <div class="input-group">
+                <input type="text" id="bookTitle" placeholder="Book Title" required>
+                <input type="text" id="bookAuthor" placeholder="Author" required>
+                <input type="text" id="bookCategory" placeholder="Category" required>
+                <button onclick="addBook()">+ Add Book</button>
+            </div>
+        </div>
+
+        <div class="section" id="searchSection">
+            <h2 class="section-title">Book Collection</h2>
+            <div class="input-group">
+                <input type="text" id="searchInput" placeholder="Search books...">
+                <button onclick="searchBooks()">Search</button>
+            </div>
+            <ul id="bookList" class="book-list"></ul>
+        </div>
+
+        <div class="section" id="categoriesSection">
+            <h2 class="section-title">Book Categories</h2>
+            <div id="categoryList"></div>
+        </div>
+
+        <div class="section" id="borrowingSection">
+            <h2 class="section-title">Borrowed History</h2>
+            <div class="input-group">
+                <input type="text" id="borrowerName" placeholder="Borrower Name" required>
+                <input type="text" id="borrowedBookTitle" placeholder="Book Title" required>
+                <button onclick="lendBook()">Lend Book</button>
+            </div>
+            <ul id="borrowHistory" class="borrow-history"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
